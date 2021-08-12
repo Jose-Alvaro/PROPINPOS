@@ -1,11 +1,26 @@
 import streamlit as st
 import pandas as pd
-from sqlalchemy import create_engine
 import numpy as np
+import requests
 
-postgres_url = f'postgresql+psycopg2://postgres:123@localhost:5432'
-engine = create_engine(f"{postgres_url}/ProPinPos")
-engine.connect()
+st.set_page_config(layout="wide")
 
-st.text('This is a text')
-pingu=pd.read_sql("SELECT * FROM Pingu",engine)
+url="http://127.0.0.1:5000/"
+operacion="get"
+query ="Island"
+st.write("Pinguinos!")
+
+value = st.text_input('Island...')
+
+if value:
+    res = requests.get(f"{url}{operacion}?{query}={value}")
+    respuesta = res.json()
+    dfp = pd.DataFrame(respuesta)
+
+    dfp = dfp.drop(columns=["Sample Number","index","Individual ID", "Clutch Completion", "Date Egg", "Island", "studyName"])
+
+
+
+
+
+    st.write(dfp)
