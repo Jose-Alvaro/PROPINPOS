@@ -7,4 +7,17 @@ connection = engine.connect()
 
 def leer(consultar):
     consulta = list(connection.execute(consultar))
-    return (consulta)
+    return consulta
+
+def crear(consultar):
+    consulta = list(connection.execute(consultar))
+    return consulta
+
+def actualizar(consultar):
+    consulta = list(connection.execute(consultar))
+    return consulta
+
+
+def borrar(consultar):
+    consulta = list(connection.execute(consultar))
+    return consulta
