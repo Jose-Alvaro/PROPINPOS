@@ -1,0 +1,8 @@
+sqlalchemy==1.4.22
+sqlite==3.35.4
+python==3.9.5
+psycopg2==2.8.6
+pandas==1.2.4
+numpy==1.20.2
+numpy-base==1.20.2
+jupyter_core==4.7.1
