@@ -3,7 +3,7 @@
 PoyectoPinguinosPostgress viene del todopoderoso sueño de organizar a todos los pinüinos del planeta.
 ![alt text](https://github.com/Jose-Alvaro/PROPINPOS/blob/main/img/intro.png)
 
-
+#Recursos usados
 
 
 
