@@ -10,14 +10,15 @@ operacion="get"
 query ="Island"
 st.write("Pinguinos!")
 
-value = st.text_input('Island...')
+islands["Torgersen","Biscoe","Dream","" ]
+value = st.radio('Island of...', islands)
 
 if value:
     res = requests.get(f"{url}{operacion}?{query}={value}")
     respuesta = res.json()
     dfp = pd.DataFrame(respuesta)
 
-    dfp = dfp.drop(columns=["Sample Number","index","Individual ID", "Clutch Completion", "Date Egg", "Island", "studyName"])
+    dfp = dfp.drop(columns=["Sample Number","Individual ID", "Clutch Completion", "Date Egg", "studyName"])
 
 
 
