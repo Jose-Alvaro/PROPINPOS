@@ -9,15 +9,16 @@ def leer(consultar):
     consulta = list(connection.execute(consultar))
     return consulta
 
-def crear(consultar):
-    consulta = list(connection.execute(consultar))
-    return consulta
+#Métodos a Implementar
 
-def actualizar(consultar):
-    consulta = list(connection.execute(consultar))
-    return consulta
+#def crear(consultar):
+#   consulta = list(connection.execute(consultar))
+#    return consulta
 
+#def actualizar(consultar):
+#    consulta = list(connection.execute(consultar))
+#    return consulta
 
-def borrar(consultar):
-    consulta = list(connection.execute(consultar))
-    return consulta
+#def borrar(consultar):
+#    consulta = list(connection.execute(consultar))
+#    return consulta

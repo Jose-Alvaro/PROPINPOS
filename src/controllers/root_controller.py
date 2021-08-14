@@ -8,11 +8,7 @@ from bbdd import *
 @app.route("/")
 @handle_error
 def saludo():
-
     return "Hola"
-
-
-
 
 @app.route("/get")
 @handle_error
@@ -35,13 +31,9 @@ def get():
             sqlwhere += f' "{columnas[pos]}" = '+ f"'{values[pos]}' or "
     sqlwhere = sqlwhere[:-4]
 
-
-
     sqlconsult = f'SELECT * FROM public."Pingu" {sqlwhere}'
     print(sqlconsult)
     resconsulta = leer(sqlconsult)
-
-
 
     pingcont = ["index", "studyName", "Sample Number", "Species", "Island", "Individual ID", "Clutch Completion", "Date Egg", "Culmen Length (mm)", "Culmen Depth (mm)", "Flipper Length (mm)","Body Mass (g)", "Sex"]
     
