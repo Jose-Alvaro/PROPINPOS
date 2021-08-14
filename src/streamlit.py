@@ -10,7 +10,7 @@ operacion="get"
 query ="Island"
 st.write("Pinguinos!")
 
-islands["Torgersen","Biscoe","Dream","" ]
+islands = ["Torgersen","Biscoe","Dream","" ]
 value = st.radio('Island of...', islands)
 
 if value:
